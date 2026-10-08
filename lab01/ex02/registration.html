@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Department of Computer Science - Course Registration</title>
 </head>
 <body>
     <header>
@@ -20,43 +20,52 @@
 
     <main>
         <section>
-            <h2>Registration Form</h2>
-            <form action="./confirmation.html" method="get">
+            <h2>Course Registration Form</h2>
+            <form action="confirmation.html" method="get">
                 <fieldset>
                     <legend>Student Information</legend>
-                    <!-- The legend tag is used in html to provide a caption or title for the associated fieldset element, improving accessibility and usability for all users, inclusing those using screen readers -->
                     <p>
-                        <label for="fullname">Full name:</label>
-                        <input type="text" id="fullname" name="fullname" required><br><br>
+                        <label for="fullname">Full Name (Required):</label><br>
+                        <input type="text" id="fullname" name="fullname" required>
                     </p>
-                    
                     <p>
-                        <label for="id">Student ID:</label>
-                        <input type="text" id="id" name="id" required><br><br>
+                        <label for="student-id">Student ID (Required):</label><br>
+                        <input type="text" id="student-id" name="id" required>
                     </p>
-
                     <p>
-                        <label for="email">Email:</label>
-                        <input type="text" id="email" name="email" required><br><br>
+                        <label for="email">University Email (Required):</label><br>
+                        <input type="email" id="email" name="email" required>
                     </p>
                 </fieldset>
-                    
-                               
-                <fieldset>  
-                    <legend>Course selection</legend>
 
-                    <p>Select courses (hold Crtl/Cmd to select more than 1 course)</p>
-                    <label for="courses">Courses:</label><br>
-                    <select name="course" id="course" multiple>
-                        <option value="CS101">CS101 - Introduction to Computer Science</option>
-                        <option value="CS201">CS201 - Data Structures & Algorithms</option>
-                        <option value="CS301">CS301 - Web Development Fundamentals</option>
-                        <option value="CS305">CS305 - Database Management Systems</option>
-                        <option value="CS401">CS401 - Operating Systems</option>
-                        <option value="CS420">CS420 - Computer Graphics & Vision</option>
-                        <option value="CS450">CS450 - Artificial Intelligence</option>
-                        <option value="CS480">CS480 - Software Engineering Principles</option>
-                    </select>
+                <fieldset>
+                    <legend>Course Selection</legend>
+                    <p>Select one or more courses:</p>
+                    <p>
+                        <input type="checkbox" id="course-cs101" name="course" value="CS101">
+                        <label for="course-cs101">CS101 - Introduction to Computer Science</label><br>
+
+                        <input type="checkbox" id="course-cs201" name="course" value="CS201">
+                        <label for="course-cs201">CS201 - Data Structures &amp; Algorithms</label><br>
+
+                        <input type="checkbox" id="course-cs301" name="course" value="CS301">
+                        <label for="course-cs301">CS301 - Web Development Fundamentals</label><br>
+
+                        <input type="checkbox" id="course-cs305" name="course" value="CS305">
+                        <label for="course-cs305">CS305 - Database Management Systems</label><br>
+
+                        <input type="checkbox" id="course-cs401" name="course" value="CS401">
+                        <label for="course-cs401">CS401 - Operating Systems</label><br>
+
+                        <input type="checkbox" id="course-cs420" name="course" value="CS420">
+                        <label for="course-cs420">CS420 - Computer Graphics &amp; Vision</label><br>
+
+                        <input type="checkbox" id="course-cs450" name="course" value="CS450">
+                        <label for="course-cs450">CS450 - Artificial Intelligence</label><br>
+
+                        <input type="checkbox" id="course-cs480" name="course" value="CS480">
+                        <label for="course-cs480">CS480 - Software Engineering Principles</label>
+                    </p>
 
                     <p><strong>Semester:</strong></p>
                     <p>
@@ -69,13 +78,14 @@
                         <input type="radio" id="summer2026" name="semester" value="Summer 2026">
                         <label for="summer2026">Summer 2026</label>
                     </p>
-                    
                 </fieldset>
 
                 <fieldset>
                     <legend>Additional Information</legend>
-                    <label for="info">Comments & Special requests:</label>
-                    <textarea id="info" name="info" rows="4" cols="40" placeholder="Any comments, requests or support needs"></textarea>
+                    <p>
+                        <label for="info">Comments &amp; Special Requests:</label><br>
+                        <textarea id="info" name="info" rows="4" cols="50" placeholder="Any comments, requests or support needs"></textarea>
+                    </p>
                 </fieldset>
 
                 <p>

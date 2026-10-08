@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision &amp; Systems Research Laboratory - Join Us</title>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Vision and Systems Research Lab Seal depicting neural network and optical lens vectors">
+        <h1>Vision &amp; Systems Research Laboratory</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><strong>Join Us (Current Page)</strong></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="join-info">
+            <h2>Prospective Researchers</h2>
+            <p>
+                We are actively recruiting passionate prospective PhD students, postdocs, and undergraduate 
+                research assistants. Please submit your application using the form below.
+            </p>
+        </section>
+
+        <section id="application-form">
+            <h2>Lab Application Form</h2>
+            <p>
+                <strong>Notice Regarding File Uploads:</strong> This demonstration form submits via HTTP GET. 
+                File binaries are not transmitted in GET query strings; only the filename reference is passed.
+            </p>
+
+            <form action="join.html" method="GET">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+
+                    <p>
+                        <label for="applicant-name">Full Name (Required):</label><br>
+                        <input type="text" id="applicant-name" name="fullname" required pattern=".*\S+.*" title="Name cannot be left blank or contain only spaces.">
+                    </p>
+
+                    <p>
+                        <label for="applicant-email">Email Address (Required):</label><br>
+                        <input type="email" id="applicant-email" name="email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" title="Enter a valid email address (e.g. name@domain.com)">
+                    </p>
+
+                    <p>
+                        <label for="applicant-phone">Phone Number (Required):</label><br>
+                        <input type="tel" id="applicant-phone" name="phone" required pattern="^\+?[0-9\s\-]{8,15}$" title="Enter a valid phone number (8-15 digits, optional leading + sign).">
+                    </p>
+
+                    <p>
+                        <label for="position">Target Position:</label><br>
+                        <select id="position" name="position">
+                            <option value="phd">PhD Student</option>
+                            <option value="postdoc">Postdoctoral Researcher</option>
+                            <option value="ra">Research Assistant</option>
+                            <option value="intern">Summer Research Intern</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="interests">Statement of Research Interests:</label><br>
+                        <textarea id="interests" name="interests" rows="5" cols="50" placeholder="Describe your background in 3D graphics, PyTorch, CUDA, or XAI..."></textarea>
+                    </p>
+
+                    <p>
+                        <label for="resume-file">Upload CV / Resume (PDF):</label><br>
+                        <input type="file" id="resume-file" name="resume">
+                    </p>
+
+                    <p>
+                        <label>Availability (Select all that apply):</label><br>
+                        <input type="checkbox" id="avail-now" name="availability" value="immediately">
+                        <label for="avail-now">Immediately</label><br>
+
+                        <input type="checkbox" id="avail-sum26" name="availability" value="summer2026">
+                        <label for="avail-sum26">Summer 2026</label><br>
+
+                        <input type="checkbox" id="avail-fall26" name="availability" value="fall2026">
+                        <label for="avail-fall26">Fall 2026</label><br>
+
+                        <input type="checkbox" id="avail-spr27" name="availability" value="spring2027">
+                        <label for="avail-spr27">Spring 2027</label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Submit Application</button>
+                        <button type="reset">Reset Form</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Department of Computer Science. All rights reserved.</p>
+    </footer>
+</body>
+</html>
