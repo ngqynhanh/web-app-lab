@@ -3,8 +3,12 @@
    -> mobile-first media queries. No framework, inline styles or !important. */
 
 /* 1. Reset and predictable box sizing */
-*, *::before, *::after { box-sizing: border-box; }
-body, h1, h2, h3, p { margin: 0; }
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+body, h1, h2, h3, p { 
+    margin: 0; 
+}
 
 /* 2. Palette: blue, neutral gray, white (with shades/tints). */
 :root {
@@ -33,11 +37,23 @@ body {
     color: var(--color-text);
     background: var(--color-background);
 }
-h1, h2, h3 { line-height: 1.5; }
-h1 { font-size: 1.6rem; }
-h2 { font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--space-md); }
-h3 { font-size: 1.15rem; margin-bottom: var(--space-sm); }
-p + p { margin-top: var(--space-md); }
+h1, h2, h3 { 
+    line-height: 1.5; 
+}
+h1 { 
+    font-size: 1.6rem; }
+h2 { 
+    font-size: 1.5rem; 
+    color: var(--color-primary); 
+    margin-bottom: var(--space-md); 
+}
+h3 { 
+    font-size: 1.15rem; 
+    margin-bottom: 
+    var(--space-sm); }
+p + p { 
+    margin-top: var(--space-md); 
+}
 p + h3, ul + h3, address + h3 { margin-top: var(--space-lg); }
 a { color: var(--color-primary); text-underline-offset: 0.2em; overflow-wrap: anywhere; }
 a:hover { color: var(--color-primary-dark); }
@@ -51,7 +67,13 @@ ul { padding-left: var(--space-lg); }
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
-.container { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: var(--space-md); }
+.container { 
+    width: 100%; 
+    max-width: 1200px; 
+    margin-inline: auto; 
+    padding-inline: 
+    var(--space-md); 
+}
 .site-header { background: var(--color-primary); color: var(--color-surface); }
 .site-header__inner { padding-block: var(--space-lg); }
 .site-header__title { margin-bottom: var(--space-lg); overflow-wrap: anywhere; }
