@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Department of Computer Science</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registration Form</h2>
+            <form action="./confirmation.html" method="get">
+                <fieldset>
+                    <legend>Student Information</legend>
+                    <!-- The legend tag is used in html to provide a caption or title for the associated fieldset element, improving accessibility and usability for all users, inclusing those using screen readers -->
+                    <p>
+                        <label for="fullname">Full name:</label>
+                        <input type="text" id="fullname" name="fullname" required><br><br>
+                    </p>
+                    
+                    <p>
+                        <label for="id">Student ID:</label>
+                        <input type="text" id="id" name="id" required><br><br>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" required><br><br>
+                    </p>
+                </fieldset>
+                    
+                               
+                <fieldset>  
+                    <legend>Course selection</legend>
+
+                    <p>Select courses (hold Crtl/Cmd to select more than 1 course)</p>
+                    <label for="courses">Courses:</label><br>
+                    <select name="course" id="course" multiple>
+                        <option value="CS101">CS101 - Introduction to Computer Science</option>
+                        <option value="CS201">CS201 - Data Structures & Algorithms</option>
+                        <option value="CS301">CS301 - Web Development Fundamentals</option>
+                        <option value="CS305">CS305 - Database Management Systems</option>
+                        <option value="CS401">CS401 - Operating Systems</option>
+                        <option value="CS420">CS420 - Computer Graphics & Vision</option>
+                        <option value="CS450">CS450 - Artificial Intelligence</option>
+                        <option value="CS480">CS480 - Software Engineering Principles</option>
+                    </select>
+
+                    <p><strong>Semester:</strong></p>
+                    <p>
+                        <input type="radio" id="fall2025" name="semester" value="Fall 2025" checked>
+                        <label for="fall2025">Fall 2025</label><br>
+
+                        <input type="radio" id="spring2026" name="semester" value="Spring 2026">
+                        <label for="spring2026">Spring 2026</label><br>
+
+                        <input type="radio" id="summer2026" name="semester" value="Summer 2026">
+                        <label for="summer2026">Summer 2026</label>
+                    </p>
+                    
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    <label for="info">Comments & Special requests:</label>
+                    <textarea id="info" name="info" rows="4" cols="40" placeholder="Any comments, requests or support needs"></textarea>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Department of Computer Science. All rights reserved.</p>
+    </footer>
+</body>
+</html>
