@@ -1,0 +1,425 @@
+{
+  "browser": "153.0.8010.0",
+  "responsiveChecks": 50,
+  "themeChecks": 18,
+  "ruleCount": 185,
+  "matchedRulesForTableCell": 5,
+  "coverageRecordedRules": 65,
+  "unusedRecordedRules": 0,
+  "performance": {
+    "frames": 60,
+    "medianMs": 16.699999999999932,
+    "p95Ms": 16.799999999999983
+  },
+  "checks": [
+    "CSS expansion/collapse",
+    "conditional fields",
+    "progress indicator",
+    "GET submission",
+    "keyboard skip link",
+    "sticky table header",
+    "reduced motion"
+  ],
+  "results": [
+    {
+      "file": "index.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "research.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "people.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "publications.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "join.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "contact.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-green.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-dark.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "performance.html",
+      "width": 320,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "index.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "research.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "people.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "publications.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "join.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "contact.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-green.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-dark.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "performance.html",
+      "width": 375,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "index.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "research.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "people.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "publications.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "join.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "contact.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-green.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-dark.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "performance.html",
+      "width": 768,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "index.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "research.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "people.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "publications.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "join.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "contact.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-green.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-dark.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "performance.html",
+      "width": 1024,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "index.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "research.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "people.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "publications.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "join.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "contact.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-green.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "components-dark.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    },
+    {
+      "file": "performance.html",
+      "width": 1440,
+      "overflow": false,
+      "images": [],
+      "badLabels": 0,
+      "styles": 1
+    }
+  ]
+}

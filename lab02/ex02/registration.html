@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Department of Computer Science - Course Registration</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body class="page">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header class="site-header">
+            <div class="container site-header__inner">
+                <h1 class="site-header__title">Department of Computer Science</h1>
+                <nav class="nav" aria-label="Main navigation">
+                    <ul class="nav__list">
+                        <li><a href="index.html" class="nav__link">Home</a></li>
+                        <li><a href="courses.html" class="nav__link">Courses</a></li>
+                        <li><a href="registration.html" class="nav__link nav__link--active" aria-current="page">Registration</a></li>
+                        <li><a href="contact.html" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main id="main-content" class="container main">
+            <section class="panel">
+                <h2>Course Registration Form</h2>
+                <form class="form" action="confirmation.html" method="get">
+                    <fieldset class="form__section">
+                        <legend>Student Information</legend>
+                        <p>
+                        <label for="fullname">Full Name (Required):</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </p>
+                        <p>
+                        <label for="student-id">Student ID (Required):</label>
+                        <input type="text" id="student-id" name="id" required>
+                    </p>
+                        <p>
+                        <label for="email">University Email (Required):</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <legend>Course Selection</legend>
+                        <p>Select one or more courses:</p>
+                        <p>
+                        <span class="form__choice"><input type="checkbox" id="course-cs101" name="course" value="CS101">
+                        <label for="course-cs101">CS101 - Introduction to Computer Science</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs201" name="course" value="CS201">
+                        <label for="course-cs201">CS201 - Data Structures &amp; Algorithms</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs301" name="course" value="CS301">
+                        <label for="course-cs301">CS301 - Web Development Fundamentals</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs305" name="course" value="CS305">
+                        <label for="course-cs305">CS305 - Database Management Systems</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs401" name="course" value="CS401">
+                        <label for="course-cs401">CS401 - Operating Systems</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs420" name="course" value="CS420">
+                        <label for="course-cs420">CS420 - Computer Graphics &amp; Vision</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs450" name="course" value="CS450">
+                        <label for="course-cs450">CS450 - Artificial Intelligence</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs480" name="course" value="CS480">
+                        <label for="course-cs480">CS480 - Software Engineering Principles</label>
+                    </span></p>
+                        <p><strong>Semester:</strong></p>
+                        <p>
+                        <span class="form__choice"><input type="radio" id="fall2025" name="semester" value="Fall 2025" checked>
+                        <label for="fall2025">Fall 2025</label>
+
+                        </span><span class="form__choice"><input type="radio" id="spring2026" name="semester" value="Spring 2026">
+                        <label for="spring2026">Spring 2026</label>
+
+                        </span><span class="form__choice"><input type="radio" id="summer2026" name="semester" value="Summer 2026">
+                        <label for="summer2026">Summer 2026</label>
+                    </span></p>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <legend>Additional Information</legend>
+                        <p>
+                        <label for="info">Comments &amp; Special Requests:</label>
+                        <textarea id="info" name="info" rows="4" cols="50" placeholder="Any comments, requests or support needs"></textarea>
+                    </p>
+                    </fieldset>
+                    <p class="form__actions">
+                    <button class="button" type="submit">Submit Registration</button>
+                    <button class="button button--secondary" type="reset">Reset Form</button>
+                </p>
+                </form>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="container site-footer__inner">
+                <p>© 2026 Department of Computer Science. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

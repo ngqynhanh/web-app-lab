@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vision &amp; Systems Research Laboratory - Publications</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body data-theme="default" class="page">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header class="site-header">
+            <div class="container site-header__brand">
+                <img src="images/logo.png" alt="Vision and Systems Research Lab Seal depicting neural network and optical lens vectors" class="site-header__logo">
+                <div>
+                    <p class="site-header__eyebrow">International University · VNU HCM</p>
+                    <h1>Vision &amp; Systems Research Laboratory</h1>
+                </div>
+            </div>
+        </header>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="container">
+                <ul class="site-nav__list">
+                    <li><a href="index.html" class="site-nav__link">Home</a></li>
+                    <li><a href="research.html" class="site-nav__link">Research</a></li>
+                    <li><a href="publications.html" class="site-nav__link site-nav__link--active" aria-current="page">Publications</a></li>
+                    <li><a href="people.html" class="site-nav__link">People</a></li>
+                    <li><a href="join.html" class="site-nav__link">Join Us</a></li>
+                    <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+                    <li><a href="components.html" class="site-nav__link">Style Guide</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="container main" id="main-content" tabindex="-1">
+            <h2>Peer-Reviewed Lab Publications</h2>
+            <!-- Edge Case #6: Filter Publications via GET -->
+            <!-- Edge Case #3: Complex Table Handling Rowspan, Multiple Authors, Long Titles, Missing Links -->
+            <div class="publications-layout">
+                <aside id="filter-section" class="sidebar card">
+                    <h3>Browse by year</h3>
+                    <p class="form__help">Jump to a year below. The original GET form is a request demonstration; it does not filter static records.</p>
+                    <ul>
+                        <li><a href="#pub-2023">2023</a></li>
+                        <li><a href="#pub-2020">2020</a></li>
+                        <li><a href="#pub-2019">2019</a></li>
+                        <li><a href="#pub-2018">2018</a></li>
+                        <li><a href="#pub-2017">2017</a></li>
+                    </ul>
+                    <form action="publications.html" method="GET" class="form">
+                        <fieldset class="form__section">
+                            <legend>Filter Publications</legend>
+                            <label for="year-select">Select Year:</label>
+                            <select id="year-select" name="year">
+                        <option value="all">All Years</option>
+                        <option value="2023">2023</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                    </select>
+                            <button type="submit" class="button button--primary">Filter Publications</button>
+                        </fieldset>
+                    </form>
+                    <p><a href="performance.html">Test the 60-row table</a></p>
+                </aside>
+                <section id="publications-list" class="results">
+                    <h3 id="pub-2023">Year 2023</h3>
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table">
+                        <table class="data-table">
+                            <caption>Publications list for Year 2023</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col" class="column--optional">Authors</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="4">2023</th>
+                                    <td class="numeric">1</td>
+                                    <td><span class="publication-title">3D Gaussian Splatting for Real-Time Radiance Field Rendering</span><input class="expandable-trigger" type="checkbox" id="expand-1"><label class="expandable-label" for="expand-1">Show details</label><div class="expandable-content">Authors: Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis. Venue: SIGGRAPH / TOG 2023. Listed in the original 2023 group.</div></td>
+                                    <td class="column--optional">Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis</td>
+                                    <td>SIGGRAPH / TOG 2023<br><span class="badge badge--published">Journal / conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/2308.04079" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="numeric">2</td>
+                                    <td><span class="publication-title">RobustNeRF: Ignoring Distractors with Robust Losses</span><input class="expandable-trigger" type="checkbox" id="expand-2"><label class="expandable-label" for="expand-2">Show details</label><div class="expandable-content">Authors: Sara Sabour, Matt Tancik, Peter Shirley, Aleksander Hołynski, Sara Fridovich-Keil. Venue: CVPR 2023. Listed in the original 2023 group.</div></td>
+                                    <td class="column--optional">Sara Sabour, Matt Tancik, Peter Shirley, Aleksander Hołynski, Sara Fridovich-Keil</td>
+                                    <td>CVPR 2023<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/2302.00833" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="numeric">3</td>
+                                    <td><span class="publication-title">SynBody: Synthetic Dataset with Layered Human Models for 3D Human Perception and Modeling</span><input class="expandable-trigger" type="checkbox" id="expand-3"><label class="expandable-label" for="expand-3">Show details</label><div class="expandable-content">Authors: Zhitao Yang, Zerui Chen, Yushun Seng, Zhao Wang. Venue: ICCV 2023. Listed in the original 2023 group.</div></td>
+                                    <td class="column--optional">Zhitao Yang, Zerui Chen, Yushun Seng, Zhao Wang</td>
+                                    <td>ICCV 2023<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/2303.17368" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="numeric">4</td>
+                                    <td><span class="publication-title">4D Gaussian Splatting for Real-Time Dynamic Scene Rendering</span><input class="expandable-trigger" type="checkbox" id="expand-4"><label class="expandable-label" for="expand-4">Show details</label><div class="expandable-content">Authors: Guanjun Wu, Taoran Yi, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Qi Tian, Xinggang Wang. Venue: CVPR 2024. Listed in the original 2023 group.</div></td>
+                                    <td class="column--optional">Guanjun Wu, Taoran Yi, Jiemin Fang, Lingxi Xie, Xiaopeng Zhang, Wei Wei, Qi Tian, Xinggang Wang</td>
+                                    <td>CVPR 2024<br><span class="badge badge--published">Conference</span></td>
+                                    <td><em>Preprint Pending (No direct link available)</em></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 id="pub-2020">Year 2020</h3>
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table">
+                        <table class="data-table">
+                            <caption>Publications list for Year 2020</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col" class="column--optional">Authors</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">2020</th>
+                                    <td class="numeric">5</td>
+                                    <td><span class="publication-title">Towards Faithfully Interpretable NLP Systems: How Should We Define and Evaluate Faithfulness?</span><input class="expandable-trigger" type="checkbox" id="expand-5"><label class="expandable-label" for="expand-5">Show details</label><div class="expandable-content">Authors: Alon Jacovi, Yoav Goldberg. Venue: ACL 2020. Listed in the original 2020 group.</div></td>
+                                    <td class="column--optional">Alon Jacovi, Yoav Goldberg</td>
+                                    <td>ACL 2020<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://aclanthology.org/2020.acl-main.386/" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 id="pub-2019">Year 2019</h3>
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table">
+                        <table class="data-table">
+                            <caption>Publications list for Year 2019</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col" class="column--optional">Authors</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">2019</th>
+                                    <td class="numeric">6</td>
+                                    <td><span class="publication-title">A Benchmark for Interpretability Methods in Deep Neural Networks</span><input class="expandable-trigger" type="checkbox" id="expand-6"><label class="expandable-label" for="expand-6">Show details</label><div class="expandable-content">Authors: Sara Hooker, Dumitru Erhan, Pieter-Jan Kindermans, Been Kim. Venue: NeurIPS 2019. Listed in the original 2019 group.</div></td>
+                                    <td class="column--optional">Sara Hooker, Dumitru Erhan, Pieter-Jan Kindermans, Been Kim</td>
+                                    <td>NeurIPS 2019<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/1806.10758" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 id="pub-2018">Year 2018</h3>
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table">
+                        <table class="data-table">
+                            <caption>Publications list for Year 2018</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col" class="column--optional">Authors</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="2">2018</th>
+                                    <td class="numeric">7</td>
+                                    <td><span class="publication-title">RISE: Randomized Input Sampling for Explanation of Black-box Models</span><input class="expandable-trigger" type="checkbox" id="expand-7"><label class="expandable-label" for="expand-7">Show details</label><div class="expandable-content">Authors: Vitali Petsiuk, Abir Das, Kate Saenko. Venue: BMVC 2018. Listed in the original 2018 group.</div></td>
+                                    <td class="column--optional">Vitali Petsiuk, Abir Das, Kate Saenko</td>
+                                    <td>BMVC 2018<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/1806.07421" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="numeric">8</td>
+                                    <td><span class="publication-title">Sanity Checks for Saliency Maps</span><input class="expandable-trigger" type="checkbox" id="expand-8"><label class="expandable-label" for="expand-8">Show details</label><div class="expandable-content">Authors: Julius Adebayo, Justin Gilmer, Michael Muelly, Ian Goodfellow, Moritz Hardt, Been Kim. Venue: NeurIPS 2018. Listed in the original 2018 group.</div></td>
+                                    <td class="column--optional">Julius Adebayo, Justin Gilmer, Michael Muelly, Ian Goodfellow, Moritz Hardt, Been Kim</td>
+                                    <td>NeurIPS 2018<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/1810.03292" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3 id="pub-2017">Year 2017</h3>
+                    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable data table">
+                        <table class="data-table">
+                            <caption>Publications list for Year 2017</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col" class="column--optional">Authors</th>
+                                    <th scope="col">Venue</th>
+                                    <th scope="col">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" rowspan="2">2017</th>
+                                    <td class="numeric">9</td>
+                                    <td><span class="publication-title">What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?</span><input class="expandable-trigger" type="checkbox" id="expand-9"><label class="expandable-label" for="expand-9">Show details</label><div class="expandable-content">Authors: Alex Kendall, Yarin Gal. Venue: NeurIPS 2017. Listed in the original 2017 group.</div></td>
+                                    <td class="column--optional">Alex Kendall, Yarin Gal</td>
+                                    <td>NeurIPS 2017<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/1703.04977" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="numeric">10</td>
+                                    <td><span class="publication-title">Understanding Black-box Predictions via Influence Functions</span><input class="expandable-trigger" type="checkbox" id="expand-10"><label class="expandable-label" for="expand-10">Show details</label><div class="expandable-content">Authors: Pang Wei Koh, Percy Liang. Venue: ICML 2017. Listed in the original 2017 group.</div></td>
+                                    <td class="column--optional">Pang Wei Koh, Percy Liang</td>
+                                    <td>ICML 2017<br><span class="badge badge--published">Conference</span></td>
+                                    <td><a href="https://arxiv.org/abs/1703.04730" target="_blank" rel="noopener noreferrer">PDF Paper</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="alert">
+                        <strong>Source metadata retained.</strong>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <p>© 2026 Vision &amp; Systems Research Laboratory. Academic website demonstration.</p>
+                <p><a href="components.html">Component library</a> · <a href="performance.html">60-row performance demo</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vision &amp; Systems Research Laboratory - Join Us</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body data-theme="default" class="page">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header class="site-header">
+            <div class="container site-header__brand">
+                <img src="images/logo.png" alt="Vision and Systems Research Lab Seal depicting neural network and optical lens vectors" class="site-header__logo">
+                <div>
+                    <p class="site-header__eyebrow">International University · VNU HCM</p>
+                    <h1>Vision &amp; Systems Research Laboratory</h1>
+                </div>
+            </div>
+        </header>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="container">
+                <ul class="site-nav__list">
+                    <li><a href="index.html" class="site-nav__link">Home</a></li>
+                    <li><a href="research.html" class="site-nav__link">Research</a></li>
+                    <li><a href="publications.html" class="site-nav__link">Publications</a></li>
+                    <li><a href="people.html" class="site-nav__link">People</a></li>
+                    <li><a href="join.html" class="site-nav__link site-nav__link--active" aria-current="page">Join Us</a></li>
+                    <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+                    <li><a href="components.html" class="site-nav__link">Style Guide</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main class="container main" id="main-content" tabindex="-1">
+            <section id="join-info">
+                <h2>Prospective Researchers</h2>
+                <p>
+                We are actively recruiting passionate prospective PhD students, postdocs, and undergraduate 
+                research assistants. Please submit your application using the form below.
+            </p>
+            </section>
+            <section id="application-form">
+                <h2>Lab Application Form</h2>
+                <p class="alert">Application form demonstration: values are sent to this page through a GET request. Files and applications are not uploaded or saved.</p><form action="join.html" method="GET" class="form">
+                    <fieldset class="form__section">
+                        <legend>Application progress</legend>
+                        <p class="form__help">Select a stage to preview the CSS progress indicator. All form sections stay available.</p>
+                        <input class="step-selector step-1" type="radio" id="step-1" name="preview-step" value="1" checked>
+                        <label class="step-label" for="step-1">Applicant</label>
+                        <input class="step-selector step-2" type="radio" id="step-2" name="preview-step" value="2">
+                        <label class="step-label" for="step-2">Research</label>
+                        <input class="step-selector step-3" type="radio" id="step-3" name="preview-step" value="3">
+                        <label class="step-label" for="step-3">Documents</label>
+                        <ol class="step-indicator"><li>1 Applicant</li><li>2 Research</li><li>3 Documents</li></ol>
+                        <div class="progress-bar" aria-hidden="true"></div>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <legend>1 Applicant information</legend>
+                        <p>
+                        <label for="applicant-name">Full Name (Required):</label>
+                        <input type="text" id="applicant-name" name="fullname" required pattern=".*\S+.*" title="Name cannot be left blank or contain only spaces.">
+                    </p>
+                        <p>
+                        <label for="applicant-email">Email Address (Required):</label>
+                        <input type="email" id="applicant-email" name="email" required title="Enter a valid email address (e.g. name@domain.com)">
+                    </p>
+                        <p>
+                        <label for="applicant-phone">Phone Number (Required):</label>
+                        <input type="tel" id="applicant-phone" name="phone" required pattern="^\+?[0-9\s\-]{8,15}$" title="Enter a valid phone number (8-15 digits, optional leading + sign).">
+                    </p>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <legend>2 Research profile</legend>
+                        <p>
+                        <label for="position">Target Position:</label>
+                        <select id="position" name="position">
+                            <option value="phd">PhD Student</option>
+                            <option value="postdoc">Postdoctoral Researcher</option>
+                            <option value="ra">Research Assistant</option>
+                            <option value="intern">Summer Research Intern</option>
+                        </select>
+                    </p>
+                        <p>
+                        <label for="interests">Statement of Research Interests:</label>
+                        <textarea id="interests" name="interests" rows="5" cols="50" placeholder="Describe your background in 3D graphics, PyTorch, CUDA, or XAI..." maxlength="1000" aria-describedby="counter-help"></textarea>
+                    <span class="character-counter">Counter preview: 0 / 1000</span><span id="counter-help" class="form__help">Maximum 1000 characters. The visual counter is static for this CSS lab.</span></p>
+                        <input class="conditional-trigger" type="checkbox" id="external-funding" name="external-funding" value="yes">
+                        <label class="expandable-label" for="external-funding">I have external funding</label>
+                        <div class="conditional-fields">
+                            <label for="funding-source">Funding source optional</label>
+                            <input type="text" id="funding-source" name="funding-source" placeholder="Scholarship or sponsor">
+                            <p class="form__help">Shown with the :checked selector. Funding details are optional; an empty value may appear in the demo URL.</p>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__section">
+                        <legend>3 Documents and availability</legend>
+                        <p>
+                        <label for="resume-file">Upload CV / Resume (PDF):</label>
+                        <input type="file" id="resume-file" name="resume" accept=".pdf,application/pdf">
+                    </p>
+                        <p>
+                        <label>Availability (Select all that apply):</label>
+                        <span class="form__choice"><input type="checkbox" id="avail-now" name="availability" value="immediately">
+                        <label for="avail-now">Immediately</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="avail-sum26" name="availability" value="summer2026">
+                        <label for="avail-sum26">Summer 2026</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="avail-fall26" name="availability" value="fall2026">
+                        <label for="avail-fall26">Fall 2026</label>
+
+                        </span><span class="form__choice"><input type="checkbox" id="avail-spr27" name="availability" value="spring2027">
+                        <label for="avail-spr27">Spring 2027</label>
+                    </span></p>
+                    </fieldset>
+                    <p class="actions">
+                        <button type="submit" class="button button--primary">Submit Application</button>
+                        <button type="reset" class="button button--secondary">Reset Form</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <p>© 2026 Vision &amp; Systems Research Laboratory. Academic website demonstration.</p>
+                <p><a href="components.html">Component library</a> · <a href="performance.html">60-row performance demo</a></p>
+            </div>
+        </footer>
+    </body>
+</html>

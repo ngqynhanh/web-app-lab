@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Component library - Vision &amp; Systems Research Laboratory</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body data-theme="dark" class="page">
+        <a class="skip-link" href="#main-content">Skip to main content</a>
+        <header class="site-header">
+            <div class="container site-header__brand">
+                <img src="images/logo.png" alt="Vision and Systems Research Lab Seal depicting neural network and optical lens vectors" class="site-header__logo">
+                <div>
+                    <p class="site-header__eyebrow">International University · VNU HCM</p>
+                    <h1>Vision &amp; Systems Research Laboratory</h1>
+                </div>
+            </div>
+        </header>
+        <nav class="site-nav" aria-label="Main navigation">
+            <div class="container">
+                <ul class="site-nav__list">
+                    <li><a href="index.html" class="site-nav__link">Home</a></li>
+                    <li><a href="research.html" class="site-nav__link">Research</a></li>
+                    <li><a href="publications.html" class="site-nav__link">Publications</a></li>
+                    <li><a href="people.html" class="site-nav__link">People</a></li>
+                    <li><a href="join.html" class="site-nav__link">Join Us</a></li>
+                    <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+                    <li><a href="components.html" class="site-nav__link site-nav__link--active" aria-current="page">Style Guide</a></li>
+                </ul>
+            </div>
+        </nav>
+        <main id="main-content" class="container main">
+            <h2>Component library</h2>
+            <p>A shared visual reference for cards, buttons, badges, notifications, tables, forms, themes and edge cases.</p>
+            <div class="theme-links">
+                <a class="button button--outline" href="components.html">Professional Blue</a>
+                <a class="button button--outline" href="components-green.html">Academic Green</a>
+                <a class="button button--outline" href="components-dark.html">Dark Mode</a>
+            </div>
+            <section>
+                <h3>Cards</h3>
+                <div class="component-grid">
+                    <article class="card card--project">
+                        <img class="card__image" src="images/project-1.svg" alt="Illustration of scene points">
+                        <h4 class="card__title">Project card</h4>
+                        <p>Image, title, body text and status.</p>
+                        <span class="badge badge--active">Active</span>
+                    </article>
+                    <article class="card card--person">
+                        <h4 class="card__title">Person card</h4>
+                        <p>Faculty or student profile.</p>
+                        <span class="badge">PhD Student</span>
+                    </article>
+                    <article class="card card--publication">
+                        <h4 class="publication-title">Publication card</h4>
+                        <p>Bibliographic content and its publication status.</p>
+                        <span class="badge badge--published">Published</span>
+                    </article>
+                </div>
+            </section>
+            <section class="card">
+                <h3>Buttons and badges</h3>
+                <div class="actions">
+                    <a class="button button--primary" href="join.html">Primary</a>
+                    <a class="button button--secondary" href="research.html">Secondary</a>
+                    <a class="button button--outline" href="people.html">Outline</a>
+                    <button class="button" disabled>Disabled</button>
+                    <a class="button button--primary button--large" href="publications.html">Large</a>
+                </div>
+                <p><span class="badge">PhD Student</span> <span class="badge badge--active">Active</span> <span class="badge badge--published">Published</span></p>
+            </section>
+            <section>
+                <h3>Alerts</h3>
+                <div class="alert">Information: the application period is open.</div>
+                <div class="alert alert--success">Success preview: your entries are ready for review.</div>
+                <div class="alert alert--error">Error preview: review the required email field.</div>
+            </section>
+            <section class="card">
+                <h3>Form states</h3>
+                <label for="sample-normal">Normal field</label>
+                <input id="sample-normal" placeholder="Use Tab to inspect focus">
+                <label for="sample-error">Email error example</label>
+                <input class="error" id="sample-error" type="email" value="invalid-email" aria-invalid="true" aria-describedby="sample-error-help">
+                <p class="field-error" id="sample-error-help">Enter a valid email address.</p>
+                <label for="sample-disabled">Disabled field</label>
+                <input id="sample-disabled" value="Unavailable in this preview" disabled>
+                <label for="sample-file">CV upload example</label>
+                <input type="file" id="sample-file" accept=".pdf,application/pdf">
+                <label for="sample-statement">Statement preview</label>
+                <textarea id="sample-statement" maxlength="1000"></textarea>
+                <span class="character-counter">Counter preview: 0 / 1000</span>
+                <p class="form__help">Counter styling only; JavaScript can update it in a later lab.</p>
+                <input class="conditional-trigger" type="checkbox" id="sample-conditional">
+                <label class="expandable-label" for="sample-conditional">Show optional field</label>
+                <div class="conditional-fields">
+                    <label for="sample-optional">Optional details</label>
+                    <input id="sample-optional">
+                </div>
+            </section>
+            <section>
+                <h3>Advanced form and table examples</h3>
+                <p><a href="join.html">Application progress, file controls and conditional funding fields</a></p>
+                <p><a href="publications.html">Sticky table headers, CSS expandable details and mobile column hiding</a></p>
+            </section>
+            <section class="card">
+                <h3>Long content and missing data</h3>
+                <span class="truncate" tabindex="0">An intentionally very long publication title explaining real time radiance field rendering with robust optimization under challenging visual conditions and complex dynamic three dimensional scene representations</span>
+                <p class="muted">Hover or focus the title to reveal the full text.</p>
+                <p>Missing publication link: <span class="muted">Not available</span></p>
+            </section>
+            <section>
+                <h3>Empty and loading states</h3>
+                <div class="empty-state">No publications found. Try another year.</div>
+                <div class="loading-state">Loading publications preview</div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <div class="container">
+                <p>© 2026 Vision &amp; Systems Research Laboratory. Academic website demonstration.</p>
+                <p><a href="components.html">Component library</a> · <a href="performance.html">60-row performance demo</a></p>
+            </div>
+        </footer>
+    </body>
+</html>
