@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lab 03 Exercise 1 · Interactive Course Catalog</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to content</a>
+    <header>
+      <div class="container">
+        <p>Lab 03 · Exercise 1</p>
+        <h1>Interactive Course Catalog</h1>
+        <p>International University · Computer Science</p>
+      </div>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+      <p class="intro">
+        Fetch courses from JSON, search locally and filter by category.
+      </p>
+      <section class="controls" aria-label="Course search and filters">
+        <div class="autocomplete-wrap">
+          <label for="search-input">Search by course, title or instructor</label
+          ><input
+            id="search-input"
+            type="search"
+            placeholder="Search courses…"
+            autocomplete="off"
+          />
+          <div
+            id="suggestions"
+            class="suggestions"
+            role="listbox"
+            aria-label="Course suggestions"
+            hidden
+          ></div>
+        </div>
+        <div class="filters" role="group" aria-label="Category">
+          <button
+            type="button"
+            class="filter-btn secondary"
+            data-category="all"
+            aria-pressed="true"
+          >
+            All</button
+          ><button
+            type="button"
+            class="filter-btn secondary"
+            data-category="web"
+            aria-pressed="false"
+          >
+            Web</button
+          ><button
+            type="button"
+            class="filter-btn secondary"
+            data-category="database"
+            aria-pressed="false"
+          >
+            Database</button
+          ><button
+            type="button"
+            class="filter-btn secondary"
+            data-category="systems"
+            aria-pressed="false"
+          >
+            Systems
+          </button>
+        </div>
+      </section>
+      <p id="results-info" class="results" role="status" aria-live="polite"></p>
+      <div id="course-list" class="view-host course-grid"></div>
+    </main>
+    <footer>
+      <div class="container">
+        Nguyen Quynh Anh · ITCSIU24005 · Vanilla JavaScript
+      </div>
+    </footer>
+  </body>
+</html>

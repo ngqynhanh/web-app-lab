@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Course Catalog</title> 
+    <link rel="stylesheet" href="css/styles.css"> 
+</head> 
+<body> 
+    <a href="#main" class="skip"></a>
+    <header class="header"> 
+        <h1>University Course Catalog</h1> 
+    </header> 
+     
+    <main class="main"> 
+        <div class="container"> 
+            <!-- Search and filters section --> 
+            <div class="controls" aria-label="Course search and filters">
+                <label for="search-input">Search by course, title or instructor</label> 
+                <input  
+                    type="text"  
+                    id="search-input"  
+                    placeholder="Search courses..." 
+                    class="search-input" 
+                    autocomplete="on"
+                /> 
+                <div
+                    id="suggestions"
+                    class="suggestions"
+                    role="listbox"
+                    aria-label="Course suggestions"
+                    hidden
+                ></div>
+            </div> 
+            <div class="filters" role="group" aria-label="Category"> 
+                <button class="filter-btn active" data-category="all">All</button> 
+                <button class="filter-btn" data-category="web">Web</button> 
+                <button class="filter-btn" data-category="database">Database</button> 
+                <button class="filter-btn" data-category="systems">Systems</button> 
+            </div> 
+
+            <section>
+                <div class="toolbar">
+                    <div class="control">
+                        <label for="sort-by">Sort by</label>
+                        <select name="sort-by" id="sort-by">
+                            <option value="code">Course code</option>
+                            <option value="title">Title</option>
+                            <option value="seats">Seat available</option>
+                            <option value="credits">Credits</option>
+                        </select>
+                    </div>
+                    <button id="sort-direction" type="button" class="secondary" aria-label="Toggle sorting direction">
+                        Ascending ↑
+                    </button>
+                    <label class="check-label">
+                        <input type="checkbox" id="favorites-only">
+                        Favorites Only
+                    </label>
+                </div>
+
+                <div class="tabs" role="tablist" aria-label="Course view">
+                    <button id="tab-cards" role="tab" data-view="cards">Cards</button>
+                    <button id="tab-table" role="tab" tabindex="-1" data-view="table">Table</button>
+                    <button id="tab-list" role="tab" tabindex="-1" data-view="list">List</button>
+                </div>
+
+                
+            </section>
+             
+            <!-- Results count --> 
+            <div id="results-info" class="results-info" ></div> 
+             
+            <!-- Course list (populated by JavaScript) --> 
+            <div id="course-list" class="course-grid"> 
+                <!-- Courses will be inserted here --> 
+            </div> 
+        </div> 
+    </main> 
+     
+    <script src="js/app.js"></script> 
+</body> 
+</html>

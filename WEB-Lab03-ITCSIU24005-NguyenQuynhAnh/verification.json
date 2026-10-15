@@ -1,0 +1,47 @@
+{
+  "functional": {
+    "browser": "153.0.8010.0",
+    "passed": [
+      "Ex1 Fetch, search, category, delegated details",
+      "Ex1 HTTP error and Retry",
+      "Ex2 modal, focus, accordion, tabs, favorites, autocomplete, validation and submission",
+      "Ex3 optimistic update, persisted queue refresh recovery and idempotent commit",
+      "Ex3 undo and redo",
+      "Ex3 deliberate failure and exact rollback",
+      "Ex3 partial failure keeps other successful enrollments",
+      "Ex3 conflicts, prerequisites and waitlist",
+      "Ex3 1000-course virtualization",
+      "15 responsive page/width checks"
+    ]
+  },
+  "measurements": {
+    "browser": "153.0.8010.0",
+    "viewport": "1280 \u00d7 900",
+    "ex02": {
+      "interaction": "Four modal open/close cycles and four tab switches; no CPU throttling",
+      "frameIntervals": {
+        "samples": 164,
+        "medianMs": 16.699999999999818,
+        "p95Ms": 16.799999999999955,
+        "over50ms": 2
+      },
+      "scriptDurationMs": 9.525,
+      "layoutDurationMs": 17.891000000000002
+    },
+    "ex03": {
+      "edgeCases": {
+        "lastSeatRace": true,
+        "idempotency": true,
+        "serverPrerequisites": true,
+        "creditLimit": true,
+        "randomFailure": true
+      },
+      "virtual": {
+        "renderToNextFrameMs": 12.100000000093132,
+        "renderedRows": 14,
+        "totalCourses": 1000
+      }
+    },
+    "notes": "Headless Chromium measurements, not a universal 60fps guarantee. The direct mock tests use isolated fixtures and do not send real enrollments."
+  }
+}

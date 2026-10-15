@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lab 03 Exercise 3 · Live Course Availability</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to content</a>
+    <header>
+      <div class="container">
+        <p>Lab 03 · Exercise 3</p>
+        <h1>Live Course Availability</h1>
+        <p>International University · Computer Science</p>
+      </div>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+      <p class="intro">
+        A browser-only simulation: no real registrations or payments are sent.
+      </p>
+      <p id="connection-status" class="notice" role="status">
+        Connecting to simulated server…
+      </p>
+      <details class="debug-controls">
+        <summary>Simulation controls</summary>
+        <label class="check-label"
+          ><input id="simulate-offline" type="checkbox" />Simulate
+          offline</label
+        ><button id="fail-next" type="button" class="secondary">
+          Fail next enrollment</button
+        ><label class="check-label"
+          ><input id="realtime" type="checkbox" checked />Other students
+          simulation</label
+        ><button id="stress" class="secondary">
+          Load 1000-course performance view</button
+        ><button id="refresh-data" class="secondary">
+          Refresh server data
+        </button>
+        <p class="muted">
+          Requests normally wait 500–1500ms and fail with 10% probability.
+          Simulation controls make edge cases reproducible.
+        </p>
+      </details>
+      <div
+        id="notifications"
+        class="toast-log"
+        role="status"
+        aria-live="polite"
+      ></div>
+      <div class="layout">
+        <section>
+          <section class="controls" aria-label="Course search and filters">
+            <div class="autocomplete-wrap">
+              <label for="search-input"
+                >Search by course, title or instructor</label
+              ><input
+                id="search-input"
+                type="search"
+                placeholder="Search courses…"
+                autocomplete="off"
+              />
+              <div
+                id="suggestions"
+                class="suggestions"
+                role="listbox"
+                aria-label="Course suggestions"
+                hidden
+              ></div>
+            </div>
+            <div class="filters" role="group" aria-label="Category">
+              <button
+                type="button"
+                class="filter-btn secondary"
+                data-category="all"
+                aria-pressed="true"
+              >
+                All</button
+              ><button
+                type="button"
+                class="filter-btn secondary"
+                data-category="web"
+                aria-pressed="false"
+              >
+                Web</button
+              ><button
+                type="button"
+                class="filter-btn secondary"
+                data-category="database"
+                aria-pressed="false"
+              >
+                Database</button
+              ><button
+                type="button"
+                class="filter-btn secondary"
+                data-category="systems"
+                aria-pressed="false"
+              >
+                Systems
+              </button>
+            </div>
+          </section>
+          <div class="toolbar">
+            <div class="control">
+              <label for="sort-by">Sort by</label
+              ><select id="sort-by">
+                <option value="code">Course code</option>
+                <option value="title">Title</option>
+                <option value="seats">Seats available</option>
+                <option value="credits">Credits</option>
+              </select>
+            </div>
+            <button
+              id="sort-direction"
+              type="button"
+              class="secondary"
+              aria-label="Toggle sorting direction"
+            >
+              Ascending ↑</button
+            ><label class="check-label"
+              ><input id="favorites-only" type="checkbox" />Favorites
+              only</label
+            >
+          </div>
+          <div class="tabs" role="tablist" aria-label="Course view">
+            <button
+              id="tab-cards"
+              role="tab"
+              aria-selected="true"
+              aria-controls="course-list"
+              data-view="cards"
+            >
+              Cards</button
+            ><button
+              id="tab-table"
+              role="tab"
+              aria-selected="false"
+              aria-controls="course-list"
+              tabindex="-1"
+              data-view="table"
+            >
+              Table</button
+            ><button
+              id="tab-list"
+              role="tab"
+              aria-selected="false"
+              aria-controls="course-list"
+              tabindex="-1"
+              data-view="list"
+            >
+              List
+            </button>
+          </div>
+          <p
+            id="results-info"
+            class="results"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div
+            id="course-list"
+            class="view-host course-grid"
+            role="tabpanel"
+            aria-labelledby="tab-cards"
+            tabindex="0"
+          ></div>
+        </section>
+        <aside class="side">
+          <section class="panel">
+            <h2>Student eligibility</h2>
+            <label for="completed">Completed course codes</label
+            ><input
+              id="completed"
+              value="CS201, CS301, CS302, CS303, CS304"
+              placeholder="CS201, CS301"
+            /><label class="check-label"
+              ><input id="eligible" type="checkbox" checked />Academic standing
+              eligible</label
+            >
+            <p class="muted">
+              Provide valid student details below before checkout. Maximum 18
+              credits per semester.
+            </p>
+          </section>
+          <section class="panel">
+            <h2>Shopping cart</h2>
+            <div id="cart"></div>
+            <button id="checkout" disabled>Checkout</button>
+            <p id="cart-status" role="status"></p>
+          </section>
+          <section class="panel">
+            <h2>My enrollments</h2>
+            <div id="enrollments"></div>
+            <div class="actions">
+              <button id="undo" class="secondary" disabled>Undo</button
+              ><button id="redo" class="secondary" disabled>Redo</button>
+            </div>
+          </section>
+          <section class="panel">
+            <h2>Waitlists</h2>
+            <div id="waitlists"></div>
+          </section>
+          <section class="panel">
+            <h2>Recommendations</h2>
+            <div id="recommendations"></div>
+          </section>
+        </aside>
+      </div>
+      <section class="panel form-section" aria-labelledby="enroll-title">
+        <h2 id="enroll-title">Enrollment form</h2>
+        <form id="enrollment-form" novalidate>
+          <fieldset>
+            <legend>Student and course details</legend>
+            <div class="form-grid">
+              <div>
+                <label for="name">Student name (required)</label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  minlength="3"
+                  autocomplete="name"
+                  aria-describedby="name-error"
+                  required
+                /><span id="name-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="studentId">Student ID (8 digits, required)</label
+                ><input
+                  id="studentId"
+                  name="studentId"
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]{8}"
+                  aria-describedby="studentId-error"
+                  required
+                /><span id="studentId-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="email">Email (required)</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                  required
+                /><span id="email-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="phone">Phone (optional)</label
+                ><input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  aria-describedby="phone-error"
+                /><span id="phone-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="course">Course (required)</label
+                ><select
+                  id="course"
+                  name="course"
+                  required
+                  aria-describedby="course-error"
+                >
+                  <option value="">Choose a course</option></select
+                ><span id="course-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="comments"
+                  >Comments (optional, maximum 500 characters)</label
+                ><textarea
+                  id="comments"
+                  name="comments"
+                  maxlength="500"
+                  aria-describedby="comments-error comment-count"
+                ></textarea
+                ><span id="comment-count" class="counter">0 / 500</span
+                ><span id="comments-error" class="field-error"></span>
+              </div>
+            </div>
+          </fieldset>
+          <button id="submit-enrollment" type="submit" disabled>
+            Submit enrollment
+          </button>
+          <p id="form-status" role="status"></p>
+        </form>
+      </section>
+      <section class="panel form-section" aria-labelledby="schedule-title">
+        <h2 id="schedule-title">Weekly schedule</h2>
+        <p>
+          Drag a course card onto a weekday to stage its scheduled sections, or
+          use Add to cart. Red entries indicate conflicts. Only its actual
+          weekdays accept a drop.
+        </p>
+        <div class="actions">
+          <button id="export-image" class="secondary">
+            Export schedule image (SVG)</button
+          ><button id="export-pdf" class="secondary">Print / Save PDF</button>
+        </div>
+        <div class="schedule-wrap">
+          <div id="schedule" class="schedule"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        Nguyen Quynh Anh · ITCSIU24005 · Vanilla JavaScript
+      </div>
+    </footer>
+  </body>
+</html>

@@ -21,20 +21,43 @@
                 </nav>
             </div>
         </header>
-        <main id="main-content" class="container main">
+        <main id="main-content" class="container main" tabindex="-1">
             <section class="panel">
                 <h2>Available Courses</h2>
-                <div class="table-wrap" tabindex="0" role="region" aria-label="Course catalog; scroll horizontally on small screens">
+                <form class="catalog-filter" action="courses.html" method="get" aria-label="Search and filter courses">
+<div>
+<label for="search">Search courses</label><input id="search" name="q" type="search" placeholder="Course title or code">
+</div>
+<div>
+<label for="credits-filter">Credits</label><select id="credits-filter" name="credits"><option value="all">All credits</option>
+<option value="3">3 credits</option>
+<option value="4">4 credits</option></select>
+</div>
+<div>
+<label for="seats-filter">Availability</label><select id="seats-filter" name="availability"><option value="all">All courses</option>
+<option value="open">Seats available</option>
+<option value="full">Full</option></select>
+</div>
+<button class="button" type="submit">Search courses</button>
+</form>
+<p class="form__help">Search submits a GET request for this HTML/CSS exercise; the static table does not filter. Sorting arrows are visual indicators only. Scroll within the table to see all rows and columns.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Course catalog with ten courses; scroll for rows and columns">
                     <table class="course-table">
                         <caption>Available Computer Science Courses - Academic Year 2025/2026</caption>
                         <thead>
                             <tr>
-                                <th scope="col">Course Code</th>
-                                <th scope="col">Title</th>
-                                <th scope="col" class="numeric">Credits</th>
-                                <th scope="col">Schedule</th>
-                                <th scope="col">Instructor</th>
-                                <th scope="col" class="numeric">Available Seats</th>
+                                <th scope="col" class="sortable">Course Code<span class="sort-indicator" aria-hidden="true"> ↕</span>
+</th>
+                                <th scope="col" class="sortable">Title<span class="sort-indicator" aria-hidden="true"> ↕</span>
+</th>
+                                <th scope="col" class="numeric sortable">Credits<span class="sort-indicator" aria-hidden="true"> ↕</span>
+</th>
+                                <th scope="col" class="sortable">Schedule<span class="sort-indicator" aria-hidden="true"> ↕</span>
+</th>
+                                <th scope="col" class="sortable">Instructor<span class="sort-indicator" aria-hidden="true"> ↕</span>
+</th>
+                                <th scope="col" class="numeric sortable">Available Seats<span class="sort-indicator" aria-hidden="true"> ↕</span>
+</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -102,10 +125,26 @@
                                 <td>Dr. Tran Van C</td>
                                 <td class="numeric">10</td>
                             </tr>
-                        </tbody>
+                        <tr>
+<td>CS430</td>
+<td>Computer Networks</td>
+<td class="numeric">3</td>
+<td>Tue/Thu 13:00 - 14:30</td>
+<td>Dr. Nguyen Thi B</td>
+<td class="numeric">20</td>
+</tr>
+<tr>
+<td>CS440</td>
+<td>Machine Learning Fundamentals</td>
+<td class="numeric">3</td>
+<td>Mon/Wed 13:00 - 14:30</td>
+<td>Dr. Tran Van C</td>
+<td class="numeric">18</td>
+</tr>
+</tbody>
                     </table>
                 </div>
-            </section>
+            <details class="state-preview"><summary>Loading state style preview</summary><p class="table-loading">Loading courses…</p></details></section>
         </main>
         <footer class="site-footer">
             <div class="container site-footer__inner">
@@ -114,3 +153,4 @@
         </footer>
     </body>
 </html>
+

@@ -1,0 +1,90 @@
+[ 
+    { 
+        "code": "CS301", 
+        "title": "Web Application Development", 
+        "credits": 3, 
+        "instructor": "Dr. Smith", 
+        "schedule": "Mon/Wed 10:00-11:30", 
+        "description": "Comprehensive introduction to building modern web applications.", 
+        "prerequisites": ["CS201"], 
+        "seats": 15, 
+        "category": "web" 
+    }, 
+    { 
+        "code": "CS302", 
+        "title": "Database Systems", 
+        "credits": 3, 
+        "instructor": "Prof. Johnson", 
+        "schedule": "Tue/Thu 14:00-15:30", 
+        "description": "Design and implementation of database systems.", 
+        "prerequisites": ["CS201"], 
+        "seats": 8, 
+        "category": "database" 
+    }, 
+    { 
+        "code": "CS401", 
+        "title": "Advanced Web Technologies", 
+        "credits": 3, 
+        "instructor": "Dr. Williams", 
+        "schedule": "Mon/Wed 14:00-15:30", 
+        "description": "Advanced topics including real-time systems and microservices.", 
+        "prerequisites": ["CS301"], 
+        "seats": 5, 
+        "category": "web" 
+    }, 
+    { 
+        "code": "CS303", 
+        "title": "Computer Networks", 
+        "credits": 3, 
+        "instructor": "Dr. Brown", 
+        "schedule": "Tue/Thu 10:00-11:30", 
+        "description": "Fundamentals of computer networking and protocols.", 
+        "prerequisites": ["CS201"], 
+        "seats": 25, 
+        "category": "systems" 
+    }, 
+    { 
+        "code": "CS304", 
+        "title": "Operating Systems", 
+        "credits": 3, 
+        "instructor": "Prof. Davis", 
+       "schedule": "Mon/Wed/Fri 09:00-10:00", 
+        "description": "Process management, memory management, file systems.", 
+        "prerequisites": ["CS201"], 
+        "seats": 18, 
+        "category": "systems" 
+    }, 
+    { 
+        "code": "CS305", 
+        "title": "Advanced Databases", 
+        "credits": 3, 
+        "instructor": "Dr. Miller", 
+        "schedule": "Tue/Thu 16:00-17:30", 
+        "description": "NoSQL, distributed databases, and data warehousing.", 
+        "prerequisites": ["CS302"], 
+        "seats": 12, 
+        "category": "database" 
+    }, 
+    { 
+        "code": "CS402", 
+        "title": "Cloud Computing", 
+        "credits": 3, 
+        "instructor": "Prof. Wilson", 
+        "schedule": "Mon/Wed 13:00-14:30", 
+        "description": "Cloud architectures, deployment, and scalability.", 
+        "prerequisites": ["CS303"], 
+        "seats": 20, 
+        "category": "systems" 
+    }, 
+    { 
+        "code": "CS403", 
+        "title": "Full Stack Development", 
+        "credits": 3, 
+        "instructor": "Dr. Taylor", 
+        "schedule": "Tue/Thu 10:00-11:30", 
+        "description": "End-to-end web application development with modern frameworks.", 
+        "prerequisites": ["CS301", "CS302"], 
+        "seats": 7, 
+        "category": "web" 
+    } 
+]

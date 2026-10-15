@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lab 03 Exercise 2 · Advanced Course UI</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip">Skip to content</a>
+    <header>
+      <div class="container">
+        <p>Lab 03 · Exercise 2</p>
+        <h1>Advanced Course UI</h1>
+        <p>International University · Computer Science</p>
+      </div>
+    </header>
+    <main id="main" class="container" tabindex="-1">
+      <p class="intro">
+        Explore course details, view options, favorites and validated
+        enrollment.
+      </p>
+      <section class="controls" aria-label="Course search and filters">
+        <div class="autocomplete-wrap">
+          <label for="search-input">Search by course, title or instructor</label
+          ><input
+            id="search-input"
+            type="search"
+            placeholder="Search courses…"
+            autocomplete="off"
+          />
+          <div
+            id="suggestions"
+            class="suggestions"
+            role="listbox"
+            aria-label="Course suggestions"
+            hidden
+          ></div>
+        </div>
+        <div class="filters" role="group" aria-label="Category">
+          <button
+            type="button"
+            class="filter-btn secondary"
+            data-category="all"
+            aria-pressed="true"
+          >
+            All</button
+          ><button
+            type="button"
+            class="filter-btn secondary"
+            data-category="web"
+            aria-pressed="false"
+          >
+            Web</button
+          ><button
+            type="button"
+            class="filter-btn secondary"
+            data-category="database"
+            aria-pressed="false"
+          >
+            Database</button
+          ><button
+            type="button"
+            class="filter-btn secondary"
+            data-category="systems"
+            aria-pressed="false"
+          >
+            Systems
+          </button>
+        </div>
+      </section>
+      <div class="toolbar">
+        <div class="control">
+          <label for="sort-by">Sort by</label
+          ><select id="sort-by">
+            <option value="code">Course code</option>
+            <option value="title">Title</option>
+            <option value="seats">Seats available</option>
+            <option value="credits">Credits</option>
+          </select>
+        </div>
+        <button
+          id="sort-direction"
+          type="button"
+          class="secondary"
+          aria-label="Toggle sorting direction"
+        >
+          Ascending ↑</button
+        ><label class="check-label"
+          ><input id="favorites-only" type="checkbox" />Favorites only</label
+        >
+      </div>
+      <div class="tabs" role="tablist" aria-label="Course view">
+        <button
+          id="tab-cards"
+          role="tab"
+          aria-selected="true"
+          aria-controls="course-list"
+          data-view="cards"
+        >
+          Cards</button
+        ><button
+          id="tab-table"
+          role="tab"
+          aria-selected="false"
+          aria-controls="course-list"
+          tabindex="-1"
+          data-view="table"
+        >
+          Table</button
+        ><button
+          id="tab-list"
+          role="tab"
+          aria-selected="false"
+          aria-controls="course-list"
+          tabindex="-1"
+          data-view="list"
+        >
+          List
+        </button>
+      </div>
+      <p id="results-info" class="results" role="status" aria-live="polite"></p>
+      <div
+        id="course-list"
+        class="view-host course-grid"
+        role="tabpanel"
+        aria-labelledby="tab-cards"
+        tabindex="0"
+      ></div>
+      <section class="panel form-section" aria-labelledby="enroll-title">
+        <h2 id="enroll-title">Enrollment form</h2>
+        <form id="enrollment-form" novalidate>
+          <fieldset>
+            <legend>Student and course details</legend>
+            <div class="form-grid">
+              <div>
+                <label for="name">Student name (required)</label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  minlength="3"
+                  autocomplete="name"
+                  aria-describedby="name-error"
+                  required
+                /><span id="name-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="studentId">Student ID (8 digits, required)</label
+                ><input
+                  id="studentId"
+                  name="studentId"
+                  type="text"
+                  inputmode="numeric"
+                  pattern="[0-9]{8}"
+                  aria-describedby="studentId-error"
+                  required
+                /><span id="studentId-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="email">Email (required)</label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  aria-describedby="email-error"
+                  required
+                /><span id="email-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="phone">Phone (optional)</label
+                ><input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  aria-describedby="phone-error"
+                /><span id="phone-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="course">Course (required)</label
+                ><select
+                  id="course"
+                  name="course"
+                  required
+                  aria-describedby="course-error"
+                >
+                  <option value="">Choose a course</option></select
+                ><span id="course-error" class="field-error"></span>
+              </div>
+              <div>
+                <label for="comments"
+                  >Comments (optional, maximum 500 characters)</label
+                ><textarea
+                  id="comments"
+                  name="comments"
+                  maxlength="500"
+                  aria-describedby="comments-error comment-count"
+                ></textarea
+                ><span id="comment-count" class="counter">0 / 500</span
+                ><span id="comments-error" class="field-error"></span>
+              </div>
+            </div>
+          </fieldset>
+          <button id="submit-enrollment" type="submit" disabled>
+            Submit enrollment
+          </button>
+          <p id="form-status" role="status"></p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        Nguyen Quynh Anh · ITCSIU24005 · Vanilla JavaScript
+      </div>
+    </footer>
+  </body>
+</html>

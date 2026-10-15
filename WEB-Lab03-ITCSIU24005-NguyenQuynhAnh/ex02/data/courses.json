@@ -1,0 +1,359 @@
+[
+  {
+    "code": "CS201",
+    "title": "Data Structures and Algorithms",
+    "category": "systems",
+    "credits": 4,
+    "seats": 30,
+    "instructor": "Dr. Nguyen",
+    "prerequisites": [],
+    "description": "Explore data structures and algorithms through lectures, practical laboratories and a course project.",
+    "schedule": "Mon 09:00\u201310:30",
+    "sections": [
+      {
+        "id": "CS201-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Mon",
+            "start": 540,
+            "end": 630
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS301",
+    "title": "Web Application Development",
+    "category": "web",
+    "credits": 3,
+    "seats": 15,
+    "instructor": "Dr. Smith",
+    "prerequisites": ["CS201"],
+    "description": "Explore web application development through lectures, practical laboratories and a course project.",
+    "schedule": "Mon 10:00\u201311:30; Wed 10:00\u201311:30",
+    "sections": [
+      {
+        "id": "CS301-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Mon",
+            "start": 600,
+            "end": 690
+          },
+          {
+            "day": "Wed",
+            "start": 600,
+            "end": 690
+          }
+        ]
+      },
+      {
+        "id": "CS301-B",
+        "label": "Section B",
+        "room": "A2.204",
+        "slots": [
+          {
+            "day": "Fri",
+            "start": 780,
+            "end": 870
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS302",
+    "title": "Database Systems",
+    "category": "database",
+    "credits": 3,
+    "seats": 8,
+    "instructor": "Prof. Johnson",
+    "prerequisites": ["CS201"],
+    "description": "Explore database systems through lectures, practical laboratories and a course project.",
+    "schedule": "Tue 14:00\u201315:30; Thu 14:00\u201315:30",
+    "sections": [
+      {
+        "id": "CS302-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Tue",
+            "start": 840,
+            "end": 930
+          },
+          {
+            "day": "Thu",
+            "start": 840,
+            "end": 930
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS401",
+    "title": "Advanced Web Technologies",
+    "category": "web",
+    "credits": 3,
+    "seats": 5,
+    "instructor": "Dr. Williams",
+    "prerequisites": ["CS301"],
+    "description": "Explore advanced web technologies through lectures, practical laboratories and a course project.",
+    "schedule": "Mon 14:00\u201315:30; Wed 14:00\u201315:30",
+    "sections": [
+      {
+        "id": "CS401-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Mon",
+            "start": 840,
+            "end": 930
+          },
+          {
+            "day": "Wed",
+            "start": 840,
+            "end": 930
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS303",
+    "title": "Computer Networks",
+    "category": "systems",
+    "credits": 3,
+    "seats": 25,
+    "instructor": "Dr. Brown",
+    "prerequisites": ["CS201"],
+    "description": "Explore computer networks through lectures, practical laboratories and a course project.",
+    "schedule": "Tue 10:00\u201311:30; Thu 10:00\u201311:30",
+    "sections": [
+      {
+        "id": "CS303-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Tue",
+            "start": 600,
+            "end": 690
+          },
+          {
+            "day": "Thu",
+            "start": 600,
+            "end": 690
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS304",
+    "title": "Operating Systems",
+    "category": "systems",
+    "credits": 3,
+    "seats": 18,
+    "instructor": "Prof. Davis",
+    "prerequisites": ["CS201"],
+    "description": "Explore operating systems through lectures, practical laboratories and a course project.",
+    "schedule": "Mon 09:00\u201310:00; Wed 09:00\u201310:00; Fri 09:00\u201310:00",
+    "sections": [
+      {
+        "id": "CS304-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Mon",
+            "start": 540,
+            "end": 600
+          },
+          {
+            "day": "Wed",
+            "start": 540,
+            "end": 600
+          },
+          {
+            "day": "Fri",
+            "start": 540,
+            "end": 600
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS305",
+    "title": "Advanced Databases",
+    "category": "database",
+    "credits": 3,
+    "seats": 12,
+    "instructor": "Dr. Miller",
+    "prerequisites": ["CS302"],
+    "description": "Explore advanced databases through lectures, practical laboratories and a course project.",
+    "schedule": "Tue 16:00\u201317:30; Thu 16:00\u201317:30",
+    "sections": [
+      {
+        "id": "CS305-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Tue",
+            "start": 960,
+            "end": 1050
+          },
+          {
+            "day": "Thu",
+            "start": 960,
+            "end": 1050
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS402",
+    "title": "Cloud Computing",
+    "category": "systems",
+    "credits": 3,
+    "seats": 20,
+    "instructor": "Prof. Wilson",
+    "prerequisites": ["CS303"],
+    "description": "Explore cloud computing through lectures, practical laboratories and a course project.",
+    "schedule": "Mon 13:00\u201314:30; Wed 13:00\u201314:30",
+    "sections": [
+      {
+        "id": "CS402-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Mon",
+            "start": 780,
+            "end": 870
+          },
+          {
+            "day": "Wed",
+            "start": 780,
+            "end": 870
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS403",
+    "title": "Full Stack Development",
+    "category": "web",
+    "credits": 3,
+    "seats": 7,
+    "instructor": "Dr. Taylor",
+    "prerequisites": ["CS301", "CS302"],
+    "description": "Explore full stack development through lectures, practical laboratories and a course project.",
+    "schedule": "Tue 10:00\u201311:30; Thu 10:00\u201311:30",
+    "sections": [
+      {
+        "id": "CS403-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Tue",
+            "start": 600,
+            "end": 690
+          },
+          {
+            "day": "Thu",
+            "start": 600,
+            "end": 690
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS410",
+    "title": "Web Accessibility",
+    "category": "web",
+    "credits": 3,
+    "seats": 0,
+    "instructor": "Dr. Tran",
+    "prerequisites": ["CS301"],
+    "description": "Explore web accessibility through lectures, practical laboratories and a course project.",
+    "schedule": "Fri 10:00\u201311:30",
+    "sections": [
+      {
+        "id": "CS410-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Fri",
+            "start": 600,
+            "end": 690
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS420",
+    "title": "Data Warehousing",
+    "category": "database",
+    "credits": 3,
+    "seats": 1,
+    "instructor": "Dr. Le",
+    "prerequisites": ["CS302"],
+    "description": "Explore data warehousing through lectures, practical laboratories and a course project.",
+    "schedule": "Fri 14:00\u201315:30",
+    "sections": [
+      {
+        "id": "CS420-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Fri",
+            "start": 840,
+            "end": 930
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "CS430",
+    "title": "Distributed Systems",
+    "category": "systems",
+    "credits": 3,
+    "seats": 10,
+    "instructor": "Dr. Pham",
+    "prerequisites": ["CS304"],
+    "description": "Explore distributed systems through lectures, practical laboratories and a course project.",
+    "schedule": "Fri 16:00\u201317:30",
+    "sections": [
+      {
+        "id": "CS430-A",
+        "label": "Section A",
+        "room": "A1.402",
+        "slots": [
+          {
+            "day": "Fri",
+            "start": 960,
+            "end": 1050
+          }
+        ]
+      }
+    ]
+  }
+]

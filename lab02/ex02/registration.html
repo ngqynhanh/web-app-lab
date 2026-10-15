@@ -21,11 +21,11 @@
                 </nav>
             </div>
         </header>
-        <main id="main-content" class="container main">
+        <main id="main-content" class="container main" tabindex="-1">
             <section class="panel">
                 <h2>Course Registration Form</h2>
                 <form class="form" action="confirmation.html" method="get">
-                    <fieldset class="form__section">
+                    <fieldset class="form__section form-grid">
                         <legend>Student Information</legend>
                         <p>
                         <label for="fullname">Full Name (Required):</label>
@@ -62,12 +62,12 @@
                         </span><span class="form__choice"><input type="checkbox" id="course-cs420" name="course" value="CS420">
                         <label for="course-cs420">CS420 - Computer Graphics &amp; Vision</label>
 
-                        </span><span class="form__choice"><input type="checkbox" id="course-cs450" name="course" value="CS450">
-                        <label for="course-cs450">CS450 - Artificial Intelligence</label>
+                        </span><span class="form__choice"><input type="checkbox" id="course-cs450" name="course" value="CS450" disabled>
+                        <label for="course-cs450">CS450 - Artificial Intelligence (Full — unavailable)</label>
 
                         </span><span class="form__choice"><input type="checkbox" id="course-cs480" name="course" value="CS480">
                         <label for="course-cs480">CS480 - Software Engineering Principles</label>
-                    </span></p>
+                    </span><span class="form__choice"><input type="checkbox" id="course-cs430" name="course" value="CS430"><label for="course-cs430">CS430 - Computer Networks</label></span><span class="form__choice"><input type="checkbox" id="course-cs440" name="course" value="CS440"><label for="course-cs440">CS440 - Machine Learning Fundamentals</label></span></p>
                         <p><strong>Semester:</strong></p>
                         <p>
                         <span class="form__choice"><input type="radio" id="fall2025" name="semester" value="Fall 2025" checked>
@@ -93,7 +93,10 @@
                 </p>
                 </form>
             </section>
-        </main>
+        <section class="panel" aria-labelledby="feedback-title"><h2 id="feedback-title">Form feedback examples</h2>
+<p class="form__help">These examples demonstrate visual states and are separate from your registration.</p>
+<label for="email-error-example">Email error example</label><input class="error" id="email-error-example" type="email" value="invalid-email" aria-invalid="true" aria-describedby="email-error-help"><p class="field-error" id="email-error-help">Enter a valid university email address, such as name@student.hcmiu.edu.vn.</p>
+<label for="disabled-example">Unavailable course example</label><input id="disabled-example" value="CS450 — no seats available" disabled><p class="alert alert--success">Success example: all required student details have been completed.</p></section></main>
         <footer class="site-footer">
             <div class="container site-footer__inner">
                 <p>© 2026 Department of Computer Science. All rights reserved.</p>
@@ -101,3 +104,4 @@
         </footer>
     </body>
 </html>
+
