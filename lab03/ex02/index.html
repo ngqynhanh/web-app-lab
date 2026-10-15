@@ -32,11 +32,11 @@
                     hidden
                 ></div>
             </div> 
-            <div class="filters" role="group" aria-label="Category"> 
-                <button class="filter-btn active" data-category="all">All</button> 
-                <button class="filter-btn" data-category="web">Web</button> 
-                <button class="filter-btn" data-category="database">Database</button> 
-                <button class="filter-btn" data-category="systems">Systems</button> 
+            <div class="filters" role="group" aria-label="Category" aria-pressed="true"> 
+                <button class="filter-btn active" data-category="all" aria-pressed="false">All</button> 
+                <button class="filter-btn" data-category="web" aria-pressed="false">Web</button> 
+                <button class="filter-btn" data-category="database" aria-pressed="false">Database</button> 
+                <button class="filter-btn" data-category="systems"aria-pressed="false">Systems</button> 
             </div> 
 
             <section>
@@ -50,7 +50,7 @@
                             <option value="credits">Credits</option>
                         </select>
                     </div>
-                    <button id="sort-direction" type="button" class="secondary" aria-label="Toggle sorting direction">
+                    <button id="sort-direction" type="button" class="secondary" aria-label="Toggle sorting direction" aria-label="Toggle sorting direction">
                         Ascending ↑
                     </button>
                     <label class="check-label">
@@ -59,13 +59,15 @@
                     </label>
                 </div>
 
-                <div class="tabs" role="tablist" aria-label="Course view">
-                    <button id="tab-cards" role="tab" data-view="cards">Cards</button>
-                    <button id="tab-table" role="tab" tabindex="-1" data-view="table">Table</button>
-                    <button id="tab-list" role="tab" tabindex="-1" data-view="list">List</button>
+                <div class="tabs" role="tablist" aria-label="Course view" aria-label="Course view">
+                    <button id="tab-cards" role="tab" data-view="cards" aria-controls="course-list">Cards</button>
+                    <button id="tab-table" role="tab" tabindex="-1" data-view="table" aria-controls="course-list">Table</button>
+                    <button id="tab-list" role="tab" tabindex="-1" data-view="list" aria-controls="course-list">List</button>
                 </div>
-
                 
+                <p id="results-info" class="results" role="status" aria-live="polite"></p>
+                <div id="course-list" class="view-host course-grid" role="tabpanel" aria-labelledby="tab-cards" tabindex="0"></div>
+
             </section>
              
             <!-- Results count --> 
