@@ -79,7 +79,7 @@ Expand Simulation controls near the top of Exercise 3:
 - Race: CS420 starts with one seat. Use two tabs with different eight-digit IDs, stop availability simulation, and attempt enrollment. The second commit sees the fresh seat count and fails safely.
 - Partial failure: add two nonconflicting courses and arm Fail next enrollment. The first fails; later operations continue and successful enrollments stay confirmed.
 - Refresh: cart, queue, history, favorites, profile and mock enrollments persist. Tabs/modal/search reset. Retried request IDs do not decrement a seat twice.
-- Load 1000-course performance view: generates explicitly labeled copies. Only fourteen rows render at once. Search remains debounced. Test copies cannot be enrolled.
+- Load 1000-course performance view: generates explicitly labeled copies. All 1,000 courses render in the selected Cards, Table or List layout; switch tabs to compare them. Search remains debounced. Test copies cannot be enrolled.
 
 The weekly calendar accepts course-card drops only onto weekdays on which the course has a real section. Add to cart is the keyboard alternative. Export downloads an SVG image; Print / Save PDF opens the browser print dialog. Recommendations are transparent prerequisite-based hints, not a model trained on enrollment history.
 
@@ -91,4 +91,4 @@ To reset the demonstration, clear this origin's localStorage in DevTools Applica
 
 ## Verification
 
-verification.json records tested features and measured headless-Chromium timings. Browser tests cover JSON loading/error/retry, search/category, modal focus, accordion, tabs, autocomplete, favorites, validation, optimistic queue recovery, undo/redo, rollback, prerequisites, conflicts, waitlist, last-seat racing, credit limit, random failures, virtualization and 15 page/viewport combinations from 320 to 1440px. Firefox and assistive-technology testing remain manual checks. Timings are observations, not a universal 60fps guarantee.
+verification.json records tested features and measured headless-Chromium timings. Browser tests cover JSON loading/error/retry, search/category, modal focus, accordion, tabs, autocomplete, favorites, validation, optimistic queue recovery, undo/redo, rollback, prerequisites, conflicts, waitlist, last-seat racing, credit limit, random failures, the previous virtualized view and 15 page/viewport combinations from 320 to 1440px. Firefox and assistive-technology testing remain manual checks. Timings are observations, not a universal 60fps guarantee.

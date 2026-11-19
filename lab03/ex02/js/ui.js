@@ -36,9 +36,7 @@ export const debounce = (callback, ms = 150) => {
   return run;
 };
 export async function fetchCourses(signal) {
-  const url = new URLSearchParams(location.search).has("loadError")
-    ? "data/missing-courses.json"
-    : "data/courses.json";
+  const url = "data/courses.json";
   const response = await fetch(url, { signal, cache: "no-store" });
   if (!response.ok)
     throw new Error(

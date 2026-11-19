@@ -24,8 +24,7 @@ export function createCatalog({
   };
   let suggested = [],
     selected = -1,
-    renderTimer,
-    virtualCourses = [];
+    renderTimer;
   const debounced = debounce(() => render(), 150);
   function filtered() {
     const term = state.term.toLowerCase().trim();
@@ -56,20 +55,6 @@ export function createCatalog({
   function card(c) {
     return `<article class="card ${c.seats < 10 ? "low-seats" : ""} ${c.pending ? "pending" : ""}" ${c.test ? "" : 'draggable="true"'} data-code="${e(c.code)}"><h3>${e(c.code)} · ${e(c.title)}</h3><p class="meta">${e(c.instructor)} · ${c.credits} credits</p><p class="meta">${e(c.schedule)}</p><p>${e(c.description)}</p><span class="badge ${c.seats < 10 ? "low" : ""}">${c.seats} seats available${c.pending ? " · Pending" : ""}${c.enrolled ? " · Enrolled" : ""}</span>${buttons(c)}</article>`;
   }
-  function renderVirtual() {
-    const scroller = $(".virtual-list", host);
-    if (!scroller) return;
-    const start = Math.max(0, Math.floor(scroller.scrollTop / 100) - 3);
-    const end = Math.min(virtualCourses.length, start + 14);
-    const inner = $(".virtual-inner", host);
-    inner.innerHTML = virtualCourses
-      .slice(start, end)
-      .map(
-        (c, index) =>
-          `<article class="virtual-row" style="top:${(start + index) * 100}px"><div><h3>${e(c.code)} · ${e(c.title)}</h3><span>${c.credits} credits · ${c.seats} seats${c.test ? " · test copy" : ""}</span></div><button data-action="details" data-code="${e(c.code)}">View Details</button></article>`,
-      )
-      .join("");
-  }
   function render(immediate = false) {
     if (!state.ready) return;
     clearTimeout(renderTimer);
@@ -90,14 +75,8 @@ export function createCatalog({
             : "");
       $("#results-info").textContent =
         `Showing ${items.length} of ${state.courses.length} courses · ${state.view} view`;
-      if (items.length > 200) {
-        virtualCourses = items;
-        host.className = "view-host";
-        host.innerHTML =
-          '<div class="virtual-list" tabindex="0" role="region" aria-label="Virtual course list"><div class="virtual-inner"></div></div>';
-        $(".virtual-inner", host).style.height = items.length * 100 + "px";
-        renderVirtual();
-      } else if (!items.length)
+      // Keep the selected layout even for the 1,000-course dataset.
+      if (!items.length)
         host.innerHTML =
           '<p class="empty">No courses found. Try a different search or category.</p>';
       else if (state.view === "table")
@@ -117,13 +96,6 @@ export function createCatalog({
       renderTimer = setTimeout(paint, 120);
     }
   }
-  host.addEventListener(
-    "scroll",
-    (event) => {
-      if (event.target.matches(".virtual-list")) renderVirtual();
-    },
-    { capture: true, passive: true, signal: abort.signal },
-  );
   host.addEventListener(
     "click",
     (event) => {

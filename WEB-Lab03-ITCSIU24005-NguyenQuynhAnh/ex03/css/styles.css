@@ -465,55 +465,6 @@ legend {
   background: #fff0f2;
   border-color: var(--error);
 }
-.virtual-list {
-  height: 600px;
-  overflow: auto;
-  position: relative;
-  border: 1px solid var(--border);
-}
-.virtual-inner {
-  position: relative;
-}
-.virtual-row {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 100px;
-  padding: 0.6rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  border-bottom: 1px solid var(--border);
-  background: white;
-}
-.virtual-row h3 {
-  font-size: 1rem;
-  margin: 0;
-}
-.debug-controls {
-  padding: 1rem;
-  background: var(--soft);
-  border: 1px dashed var(--border);
-  margin-block: 1rem;
-}
-.check-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 400;
-}
-.skip {
-  position: absolute;
-  top: -5rem;
-  background: white;
-  padding: 1rem;
-  z-index: 100;
-  color: var(--primary);
-}
-.skip:focus {
-  top: 0;
-}
 .view-host.is-changing {
   opacity: 0;
   transform: translateY(4px);
